@@ -12,6 +12,3 @@
 ###### HelloWorld.h
 
 ###### Assignment 0 makes one class "HelloWorld" and main creates the HelloWorld object and prints out "Hello World!"
-
-
-###### ERRORS: I'm unsure if my makefile works, and I wasn't able to get the programs to compile (this was my first time using header, implementation, main in c++)

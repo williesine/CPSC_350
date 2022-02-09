@@ -9,7 +9,7 @@ HelloWorld::HelloWorld(){
 }
 
 // output method
-HelloWorld::printHelloWorld(){
+void HelloWorld::printHelloWorld(){
   cout << "Hello World!" << endl;
 }
 
