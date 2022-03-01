@@ -24,5 +24,6 @@ int main(int argc, char **argv){
   } catch(runtime_error &excpt){
     cout << excpt.what() << endl;
   }
+  delete myQueue;
   return 0;
 }
