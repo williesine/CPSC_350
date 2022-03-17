@@ -12,7 +12,7 @@ public:
   void setState(char c);
   char getState();
   ~Cell();
-  void nextGen(/* FIXME: PARAMS  */);
+  char nextGen(int neighbors);
   char m_state;
 };
 

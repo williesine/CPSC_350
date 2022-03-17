@@ -20,7 +20,12 @@ Cell::~Cell(){
   //default destructor
 }
 
-void Cell::nextGen(){
-  // change cell to the next generation (dead/alive)
-  // based off conditions that are to be met later in program
+char Cell::nextGen(int neighbors){
+  if(neighbors == 2){
+    return m_state;
+  } else if(neighbors == 3){
+    return 'X';
+  } else if(neighbors <=1 || neighbors >= 4){
+    return '-';
+  }
 }

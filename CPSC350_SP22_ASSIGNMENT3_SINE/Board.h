@@ -18,5 +18,17 @@ public:
 
   ~Board();
 
+  void printBoard(int gen, outstream &outFS); // TO OUTPUT FILE, generation number
+  void printBoard(int gen); // TO TERMINAL
+  void copyBoard(Board* arr);
+  bool isEmpty();
+  bool isFull();
+
+  int getRows();
+  int getColumns();
+  Cell getCell(int r, int c);
+  void setCell(int r, int c, Cell cell);
 
 };
+
+#endif
