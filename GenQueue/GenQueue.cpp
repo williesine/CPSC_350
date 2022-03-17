@@ -24,11 +24,24 @@ void GenQueue::insert(char d){
   if(isFull()){
     throw runtime_error("queue is full");
   }
-
   myQueue[rear++] = d;
-  rear %= mSize; // rear = rear % mSize; anything less keeps the value the same
+  rear %= mSize; // rear = rear % mSize; anything less keeps the value the same, makes it circular
   numElements++;
 
+}
+
+void GenQueue::enqueue(char d){
+  if(isFull()){
+    throw runtime_error("priority queue is full");
+  }
+
+  int i = numElements - 1;
+  while(i>=0 && d < myQueue[i]){
+    myQueue[i+1] = myQueue[i];
+    i--;
+  }
+  myQueue[i+1] = d;
+  numElements++;
 }
 
 char GenQueue::remove(){
@@ -57,4 +70,17 @@ bool GenQueue::isEmpty(){
 
 unsigned int GenQueue::getSize(){
   return numElements;
+}
+
+void GenQueue::printArray(){
+  cout << “Q SIZE: ” << getSize() << endl;
+  cout << “FRONT: ” << front <<endl;
+  cout << “REAR: ” << rear << endl;
+  for(int i = 0; i < mSize; ++i){
+     cout << “Q[“<< i << “]: ” << myQueue[i];
+     if(i != mSize-1){
+       cout << ” | “;
+     }
+  }
+  cout << endl;
 }

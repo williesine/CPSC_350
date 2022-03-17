@@ -5,12 +5,12 @@ int main(int argc, char **argv){
   GenQueue *myQueue = new GenQueue(10);
 
   try{
-    myQueue->insert('F');
-    myQueue->insert('O');
-    myQueue->insert('O');
-    myQueue->insert('B');
-    myQueue->insert('A');
-    myQueue->insert('R');
+    myQueue->enqueue('F');
+    myQueue->enqueue('O');
+    myQueue->enqueue('O');
+    myQueue->enqueue('B');
+    myQueue->enqueue('A');
+    myQueue->enqueue('R');
 
     cout << "PEEK: " << myQueue->peek() << endl;
     cout << "REMOVE: " << myQueue->remove() << endl;

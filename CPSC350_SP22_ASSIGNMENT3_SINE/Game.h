@@ -6,7 +6,7 @@
 
 class Simulation{
   protected:
-    Board *m_gameBoard;
+    Board *m_currBoard;
     Board *m_nextBoard;
     Board *m_prevBoard;
 

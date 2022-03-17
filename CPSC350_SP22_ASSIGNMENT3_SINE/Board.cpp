@@ -36,7 +36,8 @@ Board::Board(int rows, int columns, float density){
 }
 
 Board::Board(ifstream &inFS){
-  string fCont,out;
+  string fCont
+  string out;
 
   inFS >> m_rows >> m_columns; //reads rows/columns
 
@@ -46,15 +47,14 @@ Board::Board(ifstream &inFS){
     fill(m_arr[i], m_arr[i] + m_columnns, Cell());
   }
 
-  for(int r = 0; r < m_rows; ++r){
+  for(int i = 0; i < m_rows; ++i){
     inFS >> fCont;
-    for(int c = 0; c < m_columns, ++c){
-      m_arr[r][c].setState(fCont[c]);
+    for(int j = 0; j < m_columns, ++j){
+      m_arr[i][j].setState(fCont[j]);
     }
   }
   inFS.close();
 }
-
 //
 void Board::printBoard(int gen, ifstream &outFS){
 
@@ -62,9 +62,10 @@ void Board::printBoard(int gen, ifstream &outFS){
 }
 
 void Board::printBoard(int gen){
+  cout << "GENERATION: " << gen << endl;
   for(int i = 0; i < m_rows ; ++i){
     for(int j = 0; j < m_columns; ++j){
-        cout << m_arr[i][j].getState() << " ";
+      cout << m_arr[i][j].getState() << " ";
     }
     cout << endl;
   }

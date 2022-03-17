@@ -15,6 +15,7 @@ public:
   //core functions
   void insert(char d); // aka enqueue
   char remove(); // aka dequeue
+  void enqueue(char d); // priority queue
 
   //auxiliary functions
   char peek();
