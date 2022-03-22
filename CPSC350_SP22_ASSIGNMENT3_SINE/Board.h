@@ -17,11 +17,11 @@ public:
   Board(ifstream &inFS); //txt file
   ~Board();
 
-  void printBoard(int gen, outstream &outFS); // TO OUTPUT FILE, generation number
+  void printBoard(int gen, ofstream &outFS); // TO OUTPUT FILE, generation number
   void printBoard(int gen); // TO TERMINAL
   void copyBoard(Board* arr);
   bool isEmpty();
-  bool isFull();
+  bool isEqual(Board* arr);
 
   int getRows();
   int getColumns();

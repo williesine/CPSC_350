@@ -3,12 +3,12 @@
 
 #include "Board.h"
 #include <cstdlib> // for system.pause()
+#include <unistd.h>
 
-class Simulation{
+class Game{
   protected:
     Board *m_currBoard;
     Board *m_nextBoard;
-    Board *m_prevBoard;
 
   public:
     Game();
@@ -17,7 +17,7 @@ class Simulation{
     ~Game();
 
     void playGame(int result);
-    void playGame(ifstream &inFS);
+    void playGame(string fileName);
 
     virtual void calcNextGen(); // to be implemented within each sub other mode of the game.
 
